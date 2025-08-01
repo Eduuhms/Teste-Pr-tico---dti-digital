@@ -1,0 +1,12 @@
+# Node.js
+node_modules/
+
+# Ambiente
+.env
+
+# Editor/IDE
+.vscode/
+.idea/
+*.swp
+
+package-lock.json
