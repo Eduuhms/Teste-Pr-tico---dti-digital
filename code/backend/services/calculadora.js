@@ -13,8 +13,8 @@ function calcularMelhorPetshop(dataString, pequenos, grandes) {
 
     return {
       nome: petshop.nome,
-      precoTotal: "R$ " + precoTotal,
-      distancia: petshop.distancia + " Km"
+      precoTotal: precoTotal, 
+      distancia: petshop.distancia 
     };
   });
 
@@ -25,7 +25,12 @@ function calcularMelhorPetshop(dataString, pequenos, grandes) {
     return a.precoTotal - b.precoTotal;
   });
 
-  return resultados[0]; 
+  const melhorPetshop = resultados[0];
+  return {
+    nome: melhorPetshop.nome,
+    precoTotal: "R$ " + melhorPetshop.precoTotal,
+    distancia: melhorPetshop.distancia + " Km"
+  }; 
 }
 
 module.exports = { calcularMelhorPetshop };

@@ -1,0 +1,22 @@
+.resultado-container {
+  padding: 1.5rem;
+  background-color: #f0f7ff;
+  border-radius: 8px;
+  border-left: 4px solid #4a6fa5;
+}
+
+.resultado-title {
+  margin-top: 0;
+  color: #4a6fa5;
+}
+
+.resultado-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.resultado-details p {
+  margin: 0;
+  font-size: 1.1rem;
+}
