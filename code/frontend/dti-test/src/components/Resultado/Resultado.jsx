@@ -3,7 +3,6 @@ import './Resultado.css';
 const Resultado = ({ resultado }) => {
   return (
     <div className="resultado-container">
-      <h2 className="resultado-title">Melhor Petshop:</h2>
       <div className="resultado-details">
         <p><strong>Nome:</strong> {resultado.nome}</p>
         <p><strong>Preço Total:</strong> {resultado.precoTotal}</p>

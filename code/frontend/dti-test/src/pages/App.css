@@ -1,16 +1,109 @@
+/* Variáveis CSS - Cores da empresa PETZ usada como inspiração */
+:root {
+  --petz-azul: #0066CC;
+  --petz-azul-escuro: #004499;
+  --petz-azul-claro: #3388DD;
+  --petz-amarelo: #FFD700;
+  --petz-amarelo-escuro: #FFC700;
+  --petz-amarelo-claro: #FFED4E;
+  --branco: #FFFFFF;
+  --cinza-50: #F9FAFB;
+  --cinza-100: #F3F4F6;
+  --cinza-300: #D1D5DB;
+  --cinza-600: #4B5563;
+  --cinza-900: #111827;
+}
+
+* {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
 #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, var(--cinza-50) 0%, var(--branco) 100%);
+}
+
+.main-content {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  padding: 32px;
+  flex: 1;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 body, html {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: 'Arial', sans-serif;
-  background-color: white;
-  color: black
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--branco);
+  color: var(--cinza-900);
+}
+
+@media screen and (max-width: 768px) {
+  .main-content {
+    padding: 16px;
+  }
+  
+  .page-title {
+    font-size: 32px;
+  }
+  
+  .page-subtitle {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main-content {
+    padding: 8px;
+  }
+  
+  .page-title {
+    font-size: 24px;
+  }
+  
+  .page-subtitle {
+    font-size: 14px;
+  }
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 48px;
+  padding: 32px 0;
+}
+
+.page-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--petz-azul);
+  margin: 0 0 16px 0;
+  letter-spacing: -1px;
+}
+
+.page-subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 19px;
+  font-weight: 400;
+  color: var(--cinza-600);
+  margin: 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
 }
 

@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { calcularMelhorPetshop } from '../services/api';
-import Header from '../components/header/header';
-import CalculatorForm from '../components/Calculadora/Calculadora';
-import ResultDisplay from '../components/Resultado/Resultado';
-import ErrorDisplay from '../components/ErroCalculo/ErroCalculo';
+import Navbar from '../components/Navbar/Navbar';
+import Calculadora from '../components/Calculadora/Calculadora';
+import Resultado from '../components/Resultado/Resultado';
+import ErroCalculo from '../components/ErroCalculo/ErroCalculo';
 import './App.css';
 
 function App() {
@@ -18,8 +18,7 @@ function App() {
 
     setErro('');
     setResultado(null);
-
-    // Validação no frontend
+    
     if (!data) {
       setErro('Por favor, selecione uma data.');
       return;
@@ -42,10 +41,13 @@ function App() {
 
   return (
     <div className="app-container">
-      <Header />
+      <Navbar />
       
       <main className="main-content">
-        <CalculatorForm 
+        <div className="page-header">
+        </div>
+
+        <Calculadora
           data={data}
           pequenos={pequenos}
           grandes={grandes}
@@ -54,9 +56,9 @@ function App() {
           onGrandesChange={setGrandes}
           onSubmit={handleSubmit}
         />
-        
-        {erro && <ErrorDisplay message={erro} />}
-        {resultado && <ResultDisplay resultado={resultado} />}
+
+        {erro && <ErroCalculo message={erro} />}
+        {resultado && <Resultado resultado={resultado} />}
       </main>
     </div>
   );
